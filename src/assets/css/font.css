@@ -1,0 +1,8 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  /* src: url(https://gstatic.loli.net/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2) format('woff2'); */
+  src: url('../fonts/PingFang\ Regular.otf') format('opentype');
+}

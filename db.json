@@ -1,0 +1,23 @@
+{
+  "desc": "我的家庭影院",
+  "data": [
+    {
+      "id": 1,
+      "title": "唐朝诡事录",
+      "subtitle": "",
+      "time": "2022年",
+      "desc": "主演：杨旭文、杨志刚、郜思雯、陈创、石悦安鑫、孙雪宁",
+      "banner": "banners/pic02.jpg",
+      "playlist": "playlist/intro.mp4"
+    },
+    {
+      "id": 2,
+      "title": "唐朝诡事录之西行",
+      "subtitle": "",
+      "time": "2024年",
+      "desc": "主演：杨旭文、杨志刚、郜思雯、陈创、孙雪宁",
+      "banner": "banners/pic05.jpg",
+      "playlist": "playlist/intro.mp4"
+    }
+  ]
+}
