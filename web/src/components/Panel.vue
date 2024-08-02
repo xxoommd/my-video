@@ -2,7 +2,7 @@
 
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
+defineProps({
   id: {
     type: Number,
     required: true

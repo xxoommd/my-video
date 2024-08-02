@@ -3,8 +3,8 @@ import { http, HttpResponse } from "msw";
 
 export const handlers = [
   http.post("/api/videos", async ({ request }) => {
-    const { keywords } = await request.json();
-    console.log("--- keywords:", keywords);
+    const { keyword } = await request.json();
+
     return HttpResponse.json({
       desc: "mock '/api/videos' ok",
       data: [
@@ -30,6 +30,11 @@ export const handlers = [
 
   http.post("/api/video", async ({ request }) => {
     const { id } = await request.json();
+    let n = 40
+    const playlist = new Array(n);
+    for (let i = 1; i <= n; i++) {
+      playlist[i - 1] = `/playlist/${String(i).padStart(2, '0')}.mp4`
+    }
     return HttpResponse.json({
       desc: `mock /api/video ok`,
       data: {
@@ -39,7 +44,7 @@ export const handlers = [
         time: "2024年",
         desc: "主演：杨旭文、杨志刚、郜思雯、陈创、孙雪宁",
         banner: "/banners/pic05.jpg",
-        playlist: ["/playlist/video1.mp4"],
+        playlist: playlist
       },
     });
   }),
