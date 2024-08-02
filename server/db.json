@@ -3,12 +3,31 @@
     {
       "id": 1,
       "type": "tv",
-      "title": "唐朝诡事录",
-      "subtitle": "",
-      "time": "2022-09-27",
-      "desc": "主演：杨旭文、杨志刚、郜思雯、陈创、石悦安鑫、孙雪宁",
-      "banner": "banners/pic02.jpg",
-      "playlist": "playlist/intro.mp4"
+      "title": "爱，死亡和机器人 第一季",
+      "subtitle": "Love, Death & Robots Season 1",
+      "time": "2019",
+      "desc": "融合恐怖、想象力和美，从揭示古老的邪恶力量到喜剧般的末日，剧集以标志性的巧思和创造性的视觉效果，为观众带来令人震惊的奇幻、恐怖和科幻短篇故事。",
+      "banner": "banners/love_death_robots_s01.jpg",
+      "playlist": [
+        "/v/love_death_robots_s01/E01.mp4",
+        "/v/love_death_robots_s01/E02.mp4",
+        "/v/love_death_robots_s01/E03.mp4",
+        "/v/love_death_robots_s01/E04.mp4",
+        "/v/love_death_robots_s01/E05.mp4",
+        "/v/love_death_robots_s01/E06.mp4",
+        "/v/love_death_robots_s01/E07.mp4",
+        "/v/love_death_robots_s01/E08.mp4",
+        "/v/love_death_robots_s01/E09.mp4",
+        "/v/love_death_robots_s01/E10.mp4",
+        "/v/love_death_robots_s01/E11.mp4",
+        "/v/love_death_robots_s01/E12.mp4",
+        "/v/love_death_robots_s01/E13.mp4",
+        "/v/love_death_robots_s01/E14.mp4",
+        "/v/love_death_robots_s01/E15.mp4",
+        "/v/love_death_robots_s01/E16.mp4",
+        "/v/love_death_robots_s01/E17.mp4",
+        "/v/love_death_robots_s01/E18.mp4"
+      ]
     },
     {
       "id": 2,
