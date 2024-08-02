@@ -3,7 +3,7 @@ module.exports = {
     name: "my.video",
     script: "./index.js",
     "env": {
-      "NODE_ENV": "development"
+      "NODE_ENV": "production"
     }
   }]
 }
