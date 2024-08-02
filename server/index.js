@@ -19,8 +19,6 @@ fs.readFile(dbFilePath, "utf-8", (error, data) => {
   console.log("Cache loaded:", cache);
 });
 
-console.log("- cache:", cache);
-
 const server = http.createServer((req, res) => {
   let filePath = path.join(staticDir, req.url === "/" ? "index.html" : req.url);
 

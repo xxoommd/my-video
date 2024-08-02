@@ -14,7 +14,6 @@ const play1 = ref('');
 onMounted(() => {
   console.log('--- video onMounted ---')
 
-
   db.getVideo({ id: id.value }, video => {
     title.value = video.title;
     banner.value = video.banner;
@@ -22,23 +21,19 @@ onMounted(() => {
     playlist.value = video.playlist;
     play1.value = video.playlist[0];
   });
-
 })
 
 onUpdated(() => {
   console.log('--- video onUpdate ---')
-
 })
-
 </script>
-
 
 <template>
   <div id="main">
     <div class="inner">
       <h1>{{ title }}</h1>
       <span class="image main">
-        <video :key="play1" width="85%" controls>
+        <video :key="play1" width="100%" height="320px" controls>
           <source :src="play1" type="video/mp4">
         </video>
       </span>

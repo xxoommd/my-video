@@ -1,12 +1,12 @@
 const db = {
-  async listVideos({ keywords }, callback) {
+  async listVideos(q, callback) {
     try {
       const response = await fetch(`/api/videos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ keywords }),
+        body: JSON.stringify(q),
       });
 
       if (response.ok) {

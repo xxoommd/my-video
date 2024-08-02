@@ -6,7 +6,7 @@ import { ref, onMounted } from 'vue';
 const data = ref([]);
 
 onMounted(() => {
-  db.listVideos({ keywords: "hello" }, videos => {
+  db.listVideos({ keyword: "唐朝" }, videos => {
     data.value = videos;
   })
 });
