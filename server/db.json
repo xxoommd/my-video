@@ -61,6 +61,18 @@
       "playlist": [
         "/r2/inception_2010/inception_2010.mp4"
       ]
+    },
+    {
+      "id": 4,
+      "title": "怦然心动",
+      "type": "movie",
+      "subtitle": "Flipped",
+      "time": "2010-7-26",
+      "desc": "玛德琳·卡罗尔、卡兰·麦克奥利菲、艾丹·奎因、约翰·玛哈尼、摩根·莉莉、瑞安·克茨纳、佩内洛普·安·米勒、瑞贝卡·德·莫妮、安东尼·爱德华兹",
+      "banner": "/r2/flipped_2010/flipped_2010.jpg",
+      "playlist": [
+        "/r2/flipped_2010/flipped_2010.mp4"
+      ]
     }
   ]
 }
