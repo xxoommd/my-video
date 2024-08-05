@@ -93,7 +93,7 @@ app.get("*", (req, res) => {
 let port = 3000
 if (process.env.NODE_ENV == "production") {
   port = 80
-  app.use(express.static('/Volumes/extend'));
+  app.use(express.static(path.join('/Volumes/extend')));
 }
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
