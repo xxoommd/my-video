@@ -11,13 +11,6 @@ const playlist = ref([]);
 
 let currentPlay = ref('')
 
-defineProps({
-  title: {
-    type: String
-  }
-})
-
-
 onMounted(() => {
   db.getVideo({ id: id.value }, video => {
     title.value = video.title;
