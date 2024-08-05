@@ -80,16 +80,11 @@ app.post("/api/video", (req, res) => {
   });
 })
 
+
+
 const staticPath = path.join(path.dirname(__dirname), "web/dist");
 console.log('--- staticPath:', staticPath)
 app.use(express.static(staticPath));
-
-
-app.get("*", (req, res) => {
-  console.log(`--- path:${req.url} no api found ---`)
-  indexPath = path.join(staticPath, "index.html");
-  res.sendFile(indexPath);
-});
 
 let port = 3000
 if (process.env.NODE_ENV == "production") {
@@ -98,6 +93,14 @@ if (process.env.NODE_ENV == "production") {
   console.log('--- r2path:', r2path)
   app.use(express.static(r2path));
 }
+
+app.get("*", (req, res) => {
+  console.log(`--- path:${req.url} no api found ---`)
+  indexPath = path.join(staticPath, "index.html");
+  res.sendFile(indexPath);
+});
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
