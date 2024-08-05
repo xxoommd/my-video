@@ -81,6 +81,7 @@ app.post("/api/video", (req, res) => {
 })
 
 const staticPath = path.join(path.dirname(__dirname), "web/dist");
+console.log('--- staticPath:', staticPath)
 app.use(express.static(staticPath));
 
 
@@ -93,7 +94,9 @@ app.get("*", (req, res) => {
 let port = 3000
 if (process.env.NODE_ENV == "production") {
   port = 80
-  app.use(express.static(path.join('/Volumes/extend')));
+  const r2path = path.join('/Volumes/extend')
+  console.log('--- r2path:', r2path)
+  app.use(express.static(r2path));
 }
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
