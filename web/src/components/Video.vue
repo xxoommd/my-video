@@ -11,6 +11,7 @@ const playlist = ref([]);
 
 let currentPlay = ref('')
 
+
 db.getVideo({ id: id.value }, video => {
   console.log(`get video:${id.value} success:`, video)
   title.value = video.title;

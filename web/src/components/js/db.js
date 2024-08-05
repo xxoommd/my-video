@@ -19,6 +19,7 @@ const db = {
   },
 
   async getVideo({ id }, callback) {
+    console.log(`--- start /api/video id:${id}...`)
     const response = await fetch(`/api/video`, {
       method: "POST",
       headers: {
