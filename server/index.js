@@ -3,7 +3,6 @@ const path = require("path");
 const fs = require('fs');
 const { isDataView } = require("util/types");
 
-const staticPath = path.join(path.dirname(__dirname), "web/dist");
 const dbPath = path.join(__dirname, "db.json");
 
 // initalize data cache
@@ -81,11 +80,12 @@ app.post("/api/video", (req, res) => {
   });
 })
 
+const staticPath = path.join(path.dirname(__dirname), "web/dist");
 app.use(express.static(staticPath));
 
 
 app.get("*", (req, res) => {
-  console.log('--- no api found ---')
+  console.log(`--- path:${req.url} no api found ---`)
   indexPath = path.join(staticPath, "index.html");
   res.sendFile(indexPath);
 });
