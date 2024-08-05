@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
-const fs = require('fs')
+const fs = require('fs');
+const { isDataView } = require("util/types");
 
 const staticPath = path.join(path.dirname(__dirname), "web/dist");
 const dbPath = path.join(__dirname, "db.json");
@@ -16,7 +17,7 @@ fs.readFile(dbPath, "utf-8", (error, data) => {
   const tmp = JSON.parse(data);
   dataCache.push(...tmp.data);
 
-  // console.log("Cache loaded:", dataCache);
+  console.log("Cache loaded:", dataCache);
 });
 
 // Express.js
@@ -57,6 +58,31 @@ app.post("/api/videos", (req, res) => {
 
   res.json({ desc: "ok", keyword, data });
 });
+
+app.post("/api/video", (req, res) => {
+  const { id } = req.body
+  console.log("-- id:", id)
+  let v;
+  for (const item of dataCache) {
+    if (id === item.id) {
+      v = item
+      break;
+    }
+  }
+
+  console.log('--- v:', v)
+
+  if (v != undefined) {
+    res.json({
+      desc: `mock /api/video ok`,
+      data: v
+    })
+  }
+
+  res.json({
+    desc: `id:${id} not found`
+  })
+})
 
 let port = 3000
 if (process.env.NODE_ENV == "production") {

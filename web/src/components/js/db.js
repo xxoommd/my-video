@@ -1,5 +1,5 @@
 const db = {
-  async listVideos(q, callback) {
+  async listAll(q, callback) {
     try {
       const response = await fetch(`/api/videos`, {
         method: "POST",
