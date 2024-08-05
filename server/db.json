@@ -52,13 +52,13 @@
     },
     {
       "id": 3,
-      "title": "霸王别姬",
+      "title": "盗梦空间",
       "type": "movie",
-      "subtitle": "",
-      "time": "1993-01-01",
-      "desc": "张国荣、巩俐、张丰毅、葛优、英达、雷汉",
-      "banner": "banners/pic05.jpg",
-      "playlist": "playlist/intro.mp4"
+      "subtitle": "Inception",
+      "time": "2010-7-21",
+      "desc": "莱昂纳多·迪卡普里奥、玛丽昂·歌迪亚、渡边谦、约瑟夫·高登-莱维特、艾伦·佩姬、迪利普·劳、汤姆·哈迪、希里安·墨菲、汤姆·贝伦杰、迈克尔·凯恩、皮特·波斯尔思韦特、泰勒·吉蕾、卢卡斯·哈斯、安德鲁·普利文",
+      "banner": "inception_2010/inception_2010.jpg",
+      "playlist": "inception_2010/inception_2010.mp4"
     }
   ]
 }
