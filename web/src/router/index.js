@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import MainView from "../components/Main.vue";
+import VideoView from "../components/Video.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,7 +15,7 @@ const router = createRouter({
       path: "/video/:id",
       name: "detail",
       // lazy-loaded when the route is visited.
-      component: () => import("../components/Video.vue"),
+      component: VideoView,
     },
 
     // ... 其他路由配置

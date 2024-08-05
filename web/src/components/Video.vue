@@ -3,7 +3,7 @@ import { ref, onMounted, onUpdated } from 'vue';
 import db from './js/db.js';
 import { useRoute } from 'vue-router';
 
-const id = ref(useRoute().params.id);
+const id = ref(parseInt(useRoute().params.id));
 const title = ref('');
 const banner = ref('');
 const desc = ref('');
@@ -11,21 +11,17 @@ const playlist = ref([]);
 
 let currentPlay = ref('')
 
-onMounted(() => {
-  db.getVideo({ id: id.value }, video => {
-    title.value = video.title;
-    banner.value = video.banner;
-    desc.value = video.desc;
-    playlist.value = video.playlist;
-    if (playlist.value.length > 0) {
-      currentPlay.value = playlist.value[0]
-    }
-  });
-})
+db.getVideo({ id: id.value }, video => {
+  console.log(`get video:${id.value} success:`, video)
+  title.value = video.title;
+  banner.value = video.banner;
+  desc.value = video.desc;
+  playlist.value = video.playlist;
+  if (playlist.value.length > 0) {
+    currentPlay.value = playlist.value[0]
+  }
+});
 
-onUpdated(() => {
-
-})
 
 function onClickV(v) {
   console.log('-- onClickV:', v)

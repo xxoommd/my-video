@@ -5,11 +5,12 @@ import { ref, onMounted } from 'vue';
 
 const data = ref([]);
 
-onMounted(() => {
-  db.listAll({}, videos => {
-    data.value = videos;
-  })
-});
+// onMounted(() => {
+
+// });
+db.listAll({}, videos => {
+  data.value = videos;
+})
 </script>
 
 <template>

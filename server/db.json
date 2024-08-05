@@ -5,9 +5,9 @@
       "type": "tv",
       "title": "爱，死亡和机器人 第一季",
       "subtitle": "Love, Death & Robots Season 1",
-      "time": "2019",
+      "time": "2019-3-15",
       "desc": "融合恐怖、想象力和美，从揭示古老的邪恶力量到喜剧般的末日，剧集以标志性的巧思和创造性的视觉效果，为观众带来令人震惊的奇幻、恐怖和科幻短篇故事。",
-      "banner": "banners/love_death_robots_s01.jpg",
+      "banner": "/r2/love_death_robots_s01/banner.jpg",
       "playlist": [
         "/r2/love_death_robots_s01/E01.mp4",
         "/r2/love_death_robots_s01/E02.mp4",
@@ -31,13 +31,24 @@
     },
     {
       "id": 2,
-      "title": "唐朝诡事录之西行",
+      "title": "致命女人 第一季",
       "type": "tv",
-      "subtitle": "",
-      "time": "2024-07-18",
-      "desc": "主演：杨旭文、杨志刚、郜思雯、陈创、孙雪宁",
+      "subtitle": "Why Women Kill Season 1",
+      "time": "2019-8-15",
+      "desc": "主演：刘玉玲、金妮弗·古德温、柯尔比·豪威尔-巴普蒂斯特",
       "banner": "banners/pic05.jpg",
-      "playlist": "playlist/intro.mp4"
+      "playlist": [
+        "/r2/why_women_kill_s01/E01.mp4",
+        "/r2/why_women_kill_s01/E02.mp4",
+        "/r2/why_women_kill_s01/E03.mp4",
+        "/r2/why_women_kill_s01/E04.mp4",
+        "/r2/why_women_kill_s01/E05.mp4",
+        "/r2/why_women_kill_s01/E06.mp4",
+        "/r2/why_women_kill_s01/E07.mp4",
+        "/r2/why_women_kill_s01/E08.mp4",
+        "/r2/why_women_kill_s01/E09.mp4",
+        "/r2/why_women_kill_s01/E10.mp4"
+      ]
     },
     {
       "id": 3,

@@ -35,6 +35,7 @@ export const handlers = [
     for (let i = 1; i <= n; i++) {
       playlist[i - 1] = `/playlist/${String(i).padStart(2, '0')}.mp4`
     }
+
     return HttpResponse.json({
       desc: `mock /api/video ok`,
       data: {

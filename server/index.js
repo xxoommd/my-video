@@ -8,27 +8,23 @@ const dbPath = path.join(__dirname, "db.json");
 
 // initalize data cache
 const dataCache = []
-fs.readFile(dbPath, "utf-8", (error, data) => {
-  if (error) {
+const loadDataCache = async () => {
+  try {
+    const data = await fs.promises.readFile(dbPath, "utf-8");
+    const tmp = JSON.parse(data);
+    dataCache.push(...tmp.data);
+    console.log("Data cache loaded successfully:", dataCache);
+  } catch (error) {
     console.error("Error reading db.json file:", error);
-    return;
   }
+};
 
-  const tmp = JSON.parse(data);
-  dataCache.push(...tmp.data);
-
-  console.log("Cache loaded:", dataCache);
-});
+loadDataCache();
 
 // Express.js
 const app = express();
-app.use(express.static(staticPath));
-app.use(express.json());
 
-app.get("/", (req, res) => {
-  indexPath = path.join(staticPath, "index.html");
-  res.sendFile(indexPath);
-});
+app.use(express.json());
 
 app.post("/api/videos", (req, res) => {
   let data = [];
@@ -60,29 +56,39 @@ app.post("/api/videos", (req, res) => {
 });
 
 app.post("/api/video", (req, res) => {
-  const { id } = req.body
-  console.log("-- id:", id)
-  let v;
-  for (const item of dataCache) {
-    if (id === item.id) {
-      v = item
-      break;
-    }
+  if (!req.body) {
+    return res.status(400).json({ error: 'Missing request body' });
   }
 
-  console.log('--- v:', v)
+  const { id } = req.body;
 
-  if (v != undefined) {
-    res.json({
-      desc: `mock /api/video ok`,
-      data: v
-    })
+  // Check if id is null or undefined
+  if (!id) {
+    return res.status(400).json({ error: 'Missing id in request body' });
+  }
+
+  const video = dataCache.find((item) => id === item.id);
+
+  if (!video) {
+    return res.json({
+      desc: `id:${id} not found`,
+    });
   }
 
   res.json({
-    desc: `id:${id} not found`
-  })
+    desc: `mock /api/video ok`,
+    data: video,
+  });
 })
+
+app.use(express.static(staticPath));
+
+
+app.get("*", (req, res) => {
+  console.log('--- no api found ---')
+  indexPath = path.join(staticPath, "index.html");
+  res.sendFile(indexPath);
+});
 
 let port = 3000
 if (process.env.NODE_ENV == "production") {
