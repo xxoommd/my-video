@@ -13,10 +13,14 @@ export const handlers = [
         title: "唐朝诡事录之西行",
         subtitle: "第二季",
         time: "2024年",
-        desc: "主演：杨旭文、杨志刚、郜思雯、陈创、孙雪宁",
-        banner: "/banners/pic05.jpg",
+        desc: "共10集",
+        banner: "/banners/love_death_robots_s01.jpg",
       }
     }
+
+    testData[0].banner = "/banners/03195.webp"
+    testData[1].banner = "/banners/flipped_2010.jpg"
+    testData[2].banner = "/banners/03231.webp"
 
     return HttpResponse.json({
       desc: "mock '/api/videos' ok",
@@ -26,7 +30,7 @@ export const handlers = [
 
   http.post("/api/video", async ({ request }) => {
     const { id } = await request.json();
-    let n = 40
+    let n = 10
     const playlist = new Array(n);
     for (let i = 1; i <= n; i++) {
       playlist[i - 1] = `/playlist/${String(i).padStart(2, '0')}.mp4`

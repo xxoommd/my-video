@@ -25,14 +25,14 @@ defineProps({
   },
   banner: {
     type: String
-  },
+  }
 })
 
 
 </script>
 
 <template>
-  <article>
+  <article class="styleBlack" :id="id">
     <span class="image">
       <img :src="banner" :alt="title" />
     </span>

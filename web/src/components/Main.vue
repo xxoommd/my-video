@@ -1,7 +1,7 @@
 <script setup>
 import Panel from './Panel.vue';
 import db from './js/db.js';
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 const data = ref([]);
 
