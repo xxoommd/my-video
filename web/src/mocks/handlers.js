@@ -5,26 +5,22 @@ export const handlers = [
   http.post("/api/videos", async ({ request }) => {
     const { keyword } = await request.json();
 
+    const testLen = 12
+    const testData = new Array(testLen)
+    for (let i = 0; i < testLen; i++) {
+      testData[i] = {
+        id: i + 1,
+        title: "唐朝诡事录之西行",
+        subtitle: "第二季",
+        time: "2024年",
+        desc: "主演：杨旭文、杨志刚、郜思雯、陈创、孙雪宁",
+        banner: "/banners/pic05.jpg",
+      }
+    }
+
     return HttpResponse.json({
       desc: "mock '/api/videos' ok",
-      data: [
-        {
-          id: 1,
-          title: "唐朝诡事录",
-          subtitle: "",
-          time: "2022年",
-          desc: "主演：杨旭文、杨志刚、郜思雯、陈创、石悦安鑫、孙雪宁",
-          banner: "/banners/pic02.jpg",
-        },
-        {
-          id: 2,
-          title: "唐朝诡事录之西行",
-          subtitle: "",
-          time: "2024年",
-          desc: "主演：杨旭文、杨志刚、郜思雯、陈创、孙雪宁",
-          banner: "/banners/pic05.jpg",
-        },
-      ],
+      data: testData
     });
   }),
 

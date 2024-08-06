@@ -2,7 +2,7 @@ module.exports = {
   apps: [{
     name: "my.video",
     script: "./index.js",
-    "env": {
+    env: {
       "NODE_ENV": "production"
     }
   }]
